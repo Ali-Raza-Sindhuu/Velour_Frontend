@@ -1,12 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { loginRequest, verifySignupVerification, forgotPasswordRequest, resetPasswordRequest } from "../../api/authApi";
+import { loginRequest, signUpRequest, forgotPasswordRequest, resetPasswordRequest } from "../../api/authApi";
 import { mergeGuestWishlistThunk } from "../wishlist/wishlistThunks";
 
 export const signupUser = createAsyncThunk(
   "auth/signup",
-  async (verification, thunkAPI) => {
+  async (userData, thunkAPI) => {
     try {
-      const response = await verifySignupVerification(verification);
+      const response = await signUpRequest(userData);
 
       // Fold any guest-wishlisted items into the new account before the
       // rest of the app treats this user as logged in. The merge calls a

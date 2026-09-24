@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { addToCartThunk } from "../features/cart/cartThunks";
 import { toggleWishlist } from "../features/wishlist/wishlistSlice";
 import { toggleWishlistThunk } from "../features/wishlist/wishlistThunks";
-import { openCart, openLogin } from "../store/slice/Uislice";
+import { openCart } from "../store/slice/Uislice";
 
 export const MAX_PER_ORDER = 10;
 
@@ -22,18 +22,16 @@ export const useProductActions = (product) => {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const wishlistSlugs = useSelector((state) => state.wishlist?.items) || [];
   const isWishlisted = Boolean(product?.slug) && wishlistSlugs.includes(product.slug);
-  // Admin → Settings → Store details → "Require login before checkout".
-  const requireLoginToCheckout = Boolean(useSelector((state) => state.site?.storeInfo?.requireLoginToCheckout));
 
   const [pending, setPending] = useState(null); // "add" | "buy" | null
   const [error, setError] = useState("");
 
-  const add = async (quantity, intent) => {
+  const add = async (quantity, intent, options = {}) => {
     if (!product?.id || pending) return false;
     setPending(intent);
     setError("");
     try {
-      await dispatch(addToCartThunk({ productId: product.id, quantity })).unwrap();
+      await dispatch(addToCartThunk({ productId: product.id, quantity, ...options })).unwrap();
       return true;
     } catch (err) {
       setError(err?.message || "We couldn't add this to your bag. Please try again.");
@@ -43,18 +41,14 @@ export const useProductActions = (product) => {
     }
   };
 
-  const addToBag = async (quantity = 1) => {
-    const ok = await add(quantity, "add");
+  const addToBag = async (quantity = 1, options = {}) => {
+    const ok = await add(quantity, "add", options);
     if (ok) dispatch(openCart());
     return ok;
   };
 
-  const buyNow = async (quantity = 1) => {
-    if (requireLoginToCheckout && !isAuthenticated) {
-      dispatch(openLogin());
-      return false;
-    }
-    const ok = await add(quantity, "buy");
+  const buyNow = async (quantity = 1, options = {}) => {
+    const ok = await add(quantity, "buy", options);
     if (ok) navigate("/checkout");
     return ok;
   };

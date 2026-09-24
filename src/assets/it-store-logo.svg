@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 64" role="img" aria-labelledby="title">
+  <title>IT Store</title>
+  <rect width="64" height="64" rx="16" fill="#087cc4"/>
+  <path fill="#fff" d="M18 17h28v7H36v23h-8V24H18z"/>
+  <path fill="#bfe9ff" d="M40 17h7v30h-7z"/>
+  <text x="78" y="31" fill="#0f2742" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" letter-spacing="-.8">IT</text>
+  <text x="78" y="50" fill="#087cc4" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="4">STORE</text>
+</svg>

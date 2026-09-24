@@ -1,28 +1,35 @@
 {
-  "name": "backend",
+  "name": "vera-app",
+  "private": true,
   "version": "1.0.0",
-  "description": "ZeeScents Single Store Backend",
-  "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "dev": "node --watch src/server.js",
-    "start": "node src/server.js",
-    "migrate": "node src/database/migrate.js migrate",
-    "test:email": "node scripts/test-email.js",
-    "test": "node --test"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "express-rate-limit": "^7.5.0",
-    "helmet": "^7.1.0",
-    "jsonwebtoken": "^9.0.2",
-    "multer": "^1.4.5-lts.1",
-    "mysql2": "^3.11.3",
-    "nodemailer": "^10.0.10",
-    "stripe": "^22.6.2",
-    "zod": "^3.23.8"
+    "@radix-ui/react-slot": "^1.3.3",
+    "@reduxjs/toolkit": "^2.2.7",
+    "axios": "^1.20.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^13.4.2",
+    "lenis": "^1.3.26",
+    "lucide-react": "^0.383.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.7.0",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.26.0",
+    "tailwind-merge": "^2.6.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.41",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.1"
   }
 }

@@ -1,0 +1,2 @@
+import ProductCard from "./ProductCard";
+export default function ProductGrid({ products, columns = 4 }) { const columnClass = columns === 3 ? "sm:grid-cols-3" : columns === 2 ? "sm:grid-cols-2" : "sm:grid-cols-4"; if (!products?.length) return <p className="py-20 text-center text-muted-foreground">No products match these filters.</p>; return <div className={`grid grid-cols-2 ${columnClass} gap-x-6 gap-y-10`}>{products.map((product) => <ProductCard key={product.id} product={product} />)}</div>; }

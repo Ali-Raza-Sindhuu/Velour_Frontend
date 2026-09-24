@@ -7,9 +7,9 @@ export const defaultSiteSettings = {
   pages: [],
   storeInfo: { name: "", supportEmail: "", phone: "", address: "" },
   hero: {
-    badge: "New Signature scents 2026",
-    heading: "A scent that stays with you",
-    subtext: "Discover fine fragrances layered with memorable notes and made for the moments that matter most.",
+    badge: "Technology, simplified",
+    heading: "Upgrade the way you live",
+    subtext: "Discover dependable tech, from everyday essentials to your next favourite device.",
     // No stock image here: whatever sits in the defaults is painted on a
     // first visit before the CMS answers, which showed a placeholder photo
     // and then swapped it. Pages pick a fallback only once the CMS has
@@ -18,7 +18,7 @@ export const defaultSiteSettings = {
     imagePosition: "center center",
     textAlign: "left",
     overlay: 52,
-    primaryLabel: "Explore Fragrances",
+    primaryLabel: "Shop all products",
     primaryLink: "/shops",
     secondaryLabel: "Our Story",
     secondaryLink: "/about",
@@ -28,9 +28,9 @@ export const defaultSiteSettings = {
     { id: "new-arrivals", label: "New Arrivals", isVisible: true },
     { id: "brand-film", label: "Brand Film", isVisible: true },
     { id: "best-sellers", label: "Best Sellers", isVisible: true },
-    { id: "collections", label: "Fragrance Collections", isVisible: true },
+    { id: "collections", label: "Product Collections", isVisible: true },
     { id: "reviews", label: "Customer Reviews", isVisible: true },
-    { id: "fragrance-guide", label: "Fragrance Guide", isVisible: true },
+    { id: "fragrance-guide", label: "Buying Guide", isVisible: true },
   ],
 };
 
