@@ -9,7 +9,7 @@ import FramedImage from "../components/ui/FramedImage";
 import { resolveImg } from "../utils/resolveImg";
 import { Badge } from "../components/ui/Badge";
 import { Button } from "../components/ui/Button";
-import { Card } from "../components/ui/Card";
+import { Card } from "../components/ui/card";
 
 const STATUS_STYLES = {
   Pending: "bg-amber-50 text-amber-700",

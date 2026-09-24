@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import FramedImage from "./ui/FramedImage";
 import { Badge } from "./ui/Badge";
 import { Button } from "./ui/Button";
-import { Card } from "./ui/Card";
+import { Card } from "./ui/card";
 
 const CollectionCard = ({
   images,

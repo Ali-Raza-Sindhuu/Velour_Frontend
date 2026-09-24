@@ -15,7 +15,7 @@ import FramedImage from "../components/ui/FramedImage";
 import { Button } from "../components/ui/Button";
 import { Input } from "../components/ui/input";
 
-import { Card } from "../components/ui/Card";
+import { Card } from "../components/ui/card";
 
 const CartPage = () => {
   const dispatch = useDispatch();
