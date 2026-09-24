@@ -9,7 +9,7 @@ import { addToCartThunk as addToCart } from "../features/cart/cartThunks";
 import { openCart } from "../store/slice/Uislice";
 import PageHeader from "../components/layout/PageHeader";
 import SampleProduct from "../components/SampleProduct";
-import { Button } from "../components/ui/Button";
+import { Button } from "../components/ui/button";
 import { getProductOptions } from "../utils/productOptions";
 
 const Wishlist = () => {
