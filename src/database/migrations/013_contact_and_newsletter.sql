@@ -1,0 +1,17 @@
+-- Contact page submissions
+CREATE TABLE IF NOT EXISTS contact_messages (
+  id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(150) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  subject VARCHAR(200) NULL,
+  message TEXT NOT NULL,
+  status ENUM('new', 'read', 'archived') NOT NULL DEFAULT 'new',
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Footer newsletter signups
+CREATE TABLE IF NOT EXISTS newsletter_subscribers (
+  id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
