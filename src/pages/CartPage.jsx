@@ -13,7 +13,8 @@ import PageHeader from "../components/layout/PageHeader";
 import FreeShippingBar from "../components/cart/FreeShippingBar";
 import FramedImage from "../components/ui/FramedImage";
 import { Button } from "../components/ui/Button";
-import { Input } from "../components/ui/Input";
+import { Input } from "../components/ui/input";
+
 import { Card } from "../components/ui/Card";
 
 const CartPage = () => {
